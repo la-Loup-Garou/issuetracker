@@ -60,8 +60,7 @@ module.exports = function (app, myDataBase) {
 
        try{
 
-      let insertResult = await myDataBase.insertOne({
-        _id: req.body._id ? new ObjectId(req.body._id) : undefined, 
+      let insertResult = await myDataBase.insertOne({ 
         project,
           issue_title: req.body.issue_title,
           issue_text: req.body.issue_text,
