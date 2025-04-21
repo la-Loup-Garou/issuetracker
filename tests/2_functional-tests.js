@@ -180,7 +180,7 @@ suite('Functional Tests', function() {
             .keepOpen()
             .put('/api/issues/{project}')
             .send({
-                _id: '67b100bcecbac0e6d420c124'
+                _id: updateTestId
             }).end(function(err, res){
                 console.log('response', res.body)
                 assert.equal(res.status, 200)
